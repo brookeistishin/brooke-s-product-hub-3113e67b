@@ -22,7 +22,7 @@ const Hero = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-primary-foreground/80 font-light mb-4 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-          Product Manager
+          Product Management Portfolio
         </p>
         
         <p className="text-base md:text-lg text-primary-foreground/70 max-w-2xl mx-auto mb-10 animate-fade-in-up leading-relaxed" style={{ animationDelay: "0.2s" }}>
