@@ -1,31 +1,42 @@
-import { Target, Search, Code, TrendingUp } from "lucide-react";
+import { Target, Users, BarChart3, Heart } from "lucide-react";
 
 const competencies = [
   {
     icon: Target,
-    title: "Product Strategy",
+    title: "Product Strategy & Vision",
     skills: [
-      "Cross-functional leadership (6-8 person teams)",
-      "Competitive benchmarking and market positioning",
-      "End-to-end user journey mapping"
+      "Customer needs identification",
+      "Market opportunity analysis",
+      "Product roadmap development",
+      "Competitive landscape assessment"
     ]
   },
   {
-    icon: Search,
-    title: "Research & Validation",
+    icon: Users,
+    title: "Cross-Functional Leadership",
     skills: [
-      "50+ user surveys and interviews",
-      "Stakeholder synthesis and pain point analysis",
-      "Data-driven decision frameworks"
+      "Engineering collaboration",
+      "Stakeholder alignment",
+      "Consensus building across teams"
     ]
   },
   {
-    icon: Code,
-    title: "Technical Skills",
+    icon: BarChart3,
+    title: "Data-Driven Decision Making",
     skills: [
-      "SQL, Tableau, data modeling",
-      "CRM platforms (BNTouch, eMoney)",
-      "Workflow optimization and migration management"
+      "KPI definition and tracking",
+      "Performance metrics analysis",
+      "Success criteria development"
+    ]
+  },
+  {
+    icon: Heart,
+    title: "Customer-Centric Development",
+    skills: [
+      "User feedback integration",
+      "Customer trust building",
+      "Accessibility requirements",
+      "User experience optimization"
     ]
   }
 ];
@@ -33,7 +44,6 @@ const competencies = [
 const metrics = [
   { value: "2×", label: "Engagement Increase", context: "CRM Redesign" },
   { value: "$2.5K+", label: "Cost Reduction", context: "500+ Files" },
-  { value: "Top 3", label: "National Ranking", context: "4 Awards" },
   { value: "Fortune 500", label: "Strategic Influence", context: "Visa DPS" }
 ];
 
@@ -51,7 +61,7 @@ const Competencies = () => {
         </div>
         
         {/* Competency Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {competencies.map((comp, index) => (
             <div key={index} className="project-card">
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
@@ -78,7 +88,7 @@ const Competencies = () => {
           <div className="w-16 h-0.5 bg-accent mx-auto" />
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {metrics.map((metric, index) => (
             <div key={index} className="metric-card">
               <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
