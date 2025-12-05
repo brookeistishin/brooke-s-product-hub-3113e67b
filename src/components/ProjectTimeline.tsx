@@ -1,4 +1,5 @@
 import ProjectCard from "./ProjectCard";
+import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
@@ -173,6 +174,60 @@ const projects = [
 ];
 
 const ProjectTimeline = () => {
+  const timelineRef = useRef<HTMLDivElement>(null);
+  const [scrollDotPosition, setScrollDotPosition] = useState(0);
+  const [currentDate, setCurrentDate] = useState(projects[0]?.date || "");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!timelineRef.current) return;
+
+      const timelineRect = timelineRef.current.getBoundingClientRect();
+      const projectElements = timelineRef.current.querySelectorAll('[data-date]');
+
+      // Find which project is currently centered in viewport
+      let activeProject = projectElements[0];
+      let minDistance = Infinity;
+
+      projectElements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
+        const elementCenter = rect.top + rect.height / 2;
+        const viewportCenter = window.innerHeight / 2;
+        const distance = Math.abs(elementCenter - viewportCenter);
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          activeProject = element;
+        }
+      });
+
+      // Update current date from active project
+      if (activeProject) {
+        const date = activeProject.getAttribute('data-date');
+        if (date) setCurrentDate(date);
+      }
+
+      // Calculate dot position relative to timeline
+      if (activeProject) {
+        const projectRect = activeProject.getBoundingClientRect();
+        const relativeTop = projectRect.top - timelineRect.top;
+        setScrollDotPosition(relativeTop);
+      }
+    };
+
+    // Initial calculation
+    handleScroll();
+
+    // Listen to scroll events
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
     <section id="projects" className="py-20 px-6 bg-background">
       <div className="max-w-4xl mx-auto">
@@ -184,11 +239,25 @@ const ProjectTimeline = () => {
             A timeline of product management work spanning strategy, research, technical implementation, and measurable outcomes.
           </p>
         </div>
-        
-        <div className="relative pl-2">
+
+        <div ref={timelineRef} className="relative pl-2">
           {/* Timeline line */}
           <div className="timeline-line" />
-          
+
+          {/* Scrolling dot with dynamic date */}
+          <div
+            className="absolute left-0 w-12 flex flex-col items-center transition-all duration-300 ease-out"
+            style={{
+              top: `${scrollDotPosition}px`,
+              zIndex: 20
+            }}
+          >
+            <div className="timeline-dot" />
+            <div className="timeline-date">
+              {currentDate}
+            </div>
+          </div>
+
           {/* Projects */}
           {projects.map((project, index) => (
             <ProjectCard key={index} {...project} index={index} />

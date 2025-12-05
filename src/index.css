@@ -200,21 +200,3 @@
   animation: pulse-soft 2s ease-in-out infinite;
 }
 
-@keyframes dotPulse {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 hsl(var(--accent) / 0.7);
-  }
-  50% {
-    transform: scale(1.15);
-    box-shadow: 0 0 0 8px hsl(var(--accent) / 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 hsl(var(--accent) / 0);
-  }
-}
-
-.timeline-dot-active {
-  animation: dotPulse 0.6s ease-out;
-}
