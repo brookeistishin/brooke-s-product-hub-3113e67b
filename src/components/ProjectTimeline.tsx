@@ -37,7 +37,7 @@ const projects = [
     ]
   },
   {
-    title: "Nest Athens – Gift Basket Product Development",
+    title: "Nest Athens – New Product Research",
     date: "Fall 2025",
     team: "Team of 4",
     description: "Designed customizable care package platform for UGA students, validating market fit through 50+ student surveys and business owner interviews.",
