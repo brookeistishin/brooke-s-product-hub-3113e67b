@@ -1,5 +1,4 @@
 import { Calendar, Users, Building2 } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -24,45 +23,11 @@ const ProjectCard = ({
   achievements,
   index,
 }: ProjectCardProps) => {
-  const dotRef = useRef<HTMLDivElement>(null);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsAnimating(true);
-            // Reset animation after it completes
-            setTimeout(() => setIsAnimating(false), 600);
-          }
-        });
-      },
-      {
-        threshold: 0.5,
-        rootMargin: "-50px 0px -50px 0px"
-      }
-    );
-
-    if (dotRef.current) {
-      observer.observe(dotRef.current);
-    }
-
-    return () => {
-      if (dotRef.current) {
-        observer.unobserve(dotRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <div className="relative pl-16 pb-12 last:pb-0">
-      {/* Timeline date badge */}
-      <div ref={dotRef} className="absolute left-0 top-0 w-12 flex flex-col items-center">
-        <div className={`timeline-dot ${isAnimating ? 'timeline-dot-active' : ''}`} />
-        <div className="timeline-date">
-          {date}
-        </div>
+    <div className="relative pl-16 pb-12 last:pb-0" data-date={date}>
+      {/* Static timeline dot placeholder */}
+      <div className="absolute left-0 top-0 w-12 flex flex-col items-center">
+        <div className="timeline-dot opacity-30" />
       </div>
       
       {/* Project card */}
