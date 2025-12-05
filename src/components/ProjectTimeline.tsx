@@ -185,7 +185,7 @@ const ProjectTimeline = () => {
           </p>
         </div>
         
-        <div className="relative">
+        <div className="relative pl-2">
           {/* Timeline line */}
           <div className="timeline-line" />
           

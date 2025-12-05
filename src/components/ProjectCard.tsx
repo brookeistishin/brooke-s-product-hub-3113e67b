@@ -24,9 +24,14 @@ const ProjectCard = ({
   index,
 }: ProjectCardProps) => {
   return (
-    <div className="relative pl-14 pb-12 last:pb-0">
-      {/* Timeline dot */}
-      <div className="timeline-dot" style={{ top: "6px" }} />
+    <div className="relative pl-16 pb-12 last:pb-0">
+      {/* Timeline date badge */}
+      <div className="absolute left-0 top-0 w-12 flex flex-col items-center">
+        <div className="timeline-dot" />
+        <div className="timeline-date">
+          {date}
+        </div>
+      </div>
       
       {/* Project card */}
       <div className="project-card">

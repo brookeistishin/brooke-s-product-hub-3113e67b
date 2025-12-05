@@ -119,11 +119,19 @@
   }
 
   .timeline-line {
-    @apply absolute left-6 top-0 bottom-0 w-0.5 bg-border;
+    @apply absolute left-[7px] top-0 bottom-0 w-0.5 bg-border;
   }
 
   .timeline-dot {
-    @apply absolute left-4 w-5 h-5 rounded-full bg-accent border-4 border-background shadow-md z-10;
+    @apply w-4 h-4 rounded-full bg-accent border-4 border-background shadow-md z-10 flex-shrink-0;
+  }
+
+  .timeline-date {
+    @apply text-[10px] font-medium text-muted-foreground text-center mt-2 leading-tight;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    white-space: nowrap;
   }
 
   .project-card {
