@@ -3,14 +3,14 @@ import { useEffect, useRef, useState } from "react";
 
 const projects = [
   {
-    title: "AI Skills & Employer Expectations Study",
+    title: "AI Talent Readiness and Employer Insight Product Research",
     date: "September 2025 - Present",
     organization: "Independent Research",
     description: "Investigating AI competency gaps between Terry College curriculum and employer expectations through structured literature review and stakeholder analysis.",
     responsibilities: [
       "Analyzed academic publications and industry reports to identify AI skill gaps in business education",
-      "Built employer and recruiter personas to map hiring expectations",
-      "Synthesized insights into decision frameworks for curriculum planning"
+      "Build employer and recruiter personas by conducting executive focus groups to identify hiring expectations and top skills required in new talent",
+      "Design and launch a targeted survey reaching 200+ Terry College recent graduates to gather insights on AI implementation, workforce training, and user behavior"
     ],
     achievements: [
       "Identified priority AI competencies",
@@ -18,7 +18,26 @@ const projects = [
     ]
   },
   {
-    title: "Frontier Airlines Strategy – ULCC Revenue & UX Redesign",
+    title: "Nest Athens Early Stage Product Validation",
+    date: "November 2025",
+    team: "Team of 4",
+    description: "Designed customizable care package platform for UGA students, validating market fit through 50+ student surveys and business owner interviews.",
+    responsibilities: [
+      "Conducted 2 interview rounds and surveyed 50+ students on demand, pricing, preferences",
+      "Designed end-to-end user journey (landing → customization → checkout → delivery)",
+      "Performed competitor analysis against local boutique offerings"
+    ],
+    technicalDetails: [
+      "Built UX flows and wireframes for customization interface",
+      "Analyzed survey data for pricing optimization ($30–$50 range)"
+    ],
+    achievements: [
+      "Market-backed product strategy",
+      "Validated demand quantitatively"
+    ]
+  },
+  {
+    title: "Frontier Airlines CX Redesign Strategy",
     date: "October 2025",
     team: "Team of 8",
     organization: "Class Project",
@@ -38,26 +57,7 @@ const projects = [
     ]
   },
   {
-    title: "Nest Athens – New Product Research",
-    date: "Fall 2025",
-    team: "Team of 4",
-    description: "Designed customizable care package platform for UGA students, validating market fit through 50+ student surveys and business owner interviews.",
-    responsibilities: [
-      "Conducted 2 interview rounds and surveyed 50+ students on demand, pricing, preferences",
-      "Designed end-to-end user journey (landing → customization → checkout → delivery)",
-      "Performed competitor analysis against local boutique offerings"
-    ],
-    technicalDetails: [
-      "Built UX flows and wireframes for customization interface",
-      "Analyzed survey data for pricing optimization ($30–$50 range)"
-    ],
-    achievements: [
-      "Market-backed product strategy",
-      "Validated demand quantitatively"
-    ]
-  },
-  {
-    title: "Cerity Partners – Financial Planning Workflow Optimization",
+    title: "Cerity Partners Workflow Automation Optimization",
     date: "June - August 2025",
     team: "Team of 6 interns",
     organization: "4 Offices",
@@ -75,7 +75,7 @@ const projects = [
     ]
   },
   {
-    title: "Merit Aid & Entrepreneurship Correlation Study",
+    title: "Merit Aid and Entrepreneurship Correlation Study",
     date: "January - May 2025",
     organization: "Independent Research",
     description: "Shaped methodology for Kauffman Foundation-funded study examining correlation between merit aid and entrepreneurial outcomes.",
@@ -93,7 +93,7 @@ const projects = [
     ]
   },
   {
-    title: "Visa DPS Financial Services Engagement",
+    title: "Visa DPS Product Strategy",
     date: "January - May 2025",
     team: "Team of 5",
     organization: "Terry Student Consulting",
@@ -112,8 +112,8 @@ const projects = [
     ]
   },
   {
-    title: "Georgia Coffee Shop Data System",
-    date: "Fall 2024",
+    title: "Retail Analytics Dashboard MVP Development",
+    date: "October - December 2024",
     team: "Team of 5",
     organization: "Class Project",
     description: "Built analytics ecosystem providing leadership visibility into inventory, orders, and store performance.",
@@ -133,7 +133,7 @@ const projects = [
     ]
   },
   {
-    title: "Blackwell Mortgage – CRM & Customer Engagement Redesign",
+    title: "Blackwell Mortgage Customer Engagement Research",
     date: "June - August 2024",
     organization: "Individual Intern",
     description: "Redesigned newsletter and CRM workflows, mapping customer journey from email to consultation.",
@@ -152,8 +152,8 @@ const projects = [
     ]
   },
   {
-    title: '"Rent Local" – Clothing Rental App Concept',
-    date: "Spring 2024",
+    title: "Sustainable Clothing Rental App UX and Wireframe",
+    date: "February - March 2024",
     team: "Team of 4",
     organization: "Class Project",
     description: "Designed sustainable clothing rental app for Athens students with complete UX design and business model.",
@@ -244,7 +244,7 @@ const ProjectTimeline = () => {
           {/* Timeline line */}
           <div className="timeline-line" />
 
-          {/* Scrolling dot */}
+          {/* Scrolling dot with date label */}
           <div
             className="absolute left-0 flex items-center transition-all duration-300 ease-out"
             style={{
@@ -252,7 +252,10 @@ const ProjectTimeline = () => {
               zIndex: 20
             }}
           >
-            <div className="timeline-dot" />
+            <div className="timeline-dot animate-pulse-soft" />
+            <div className="timeline-date-label">
+              <span className="timeline-date-text">{currentDate}</span>
+            </div>
           </div>
 
           {/* Projects */}
