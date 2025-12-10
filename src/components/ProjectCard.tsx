@@ -25,10 +25,6 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <div className="relative pl-16 pb-12 last:pb-0" data-date={date}>
-      {/* Static timeline dot placeholder */}
-      <div className="absolute left-0 top-0 w-12 flex flex-col items-center">
-        <div className="timeline-dot opacity-30" />
-      </div>
       
       {/* Project card */}
       <div className="project-card">
