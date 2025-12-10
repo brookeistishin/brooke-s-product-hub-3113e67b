@@ -172,7 +172,7 @@ const projects = [
       "Professional PM concept",
       "UX mastery demonstrated"
     ],
-    images: [clothingAppWireframe, "/clothing-app-project.pdf"]
+    images: [clothingAppWireframe]
   }
 ];
 

@@ -13,7 +13,7 @@ const Hero = () => {
           <img
             src={headshot}
             alt="Brooke Istishin"
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full mx-auto object-cover border-4 border-primary-foreground/20 shadow-2xl"
+            className="w-52 h-52 md:w-64 md:h-64 rounded-full mx-auto object-cover border-4 border-primary-foreground/20 shadow-2xl"
           />
         </div>
         
