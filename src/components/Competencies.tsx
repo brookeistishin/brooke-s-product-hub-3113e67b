@@ -42,7 +42,7 @@ const competencies = [
 ];
 
 const metrics = [
-  { value: "2×", label: "Engagement Increase", context: "CRM Redesign" },
+  { value: "2×", label: "Engagement Increase", context: "Newsletter Redesign" },
   { value: "$2.5K+", label: "Cost Reduction", context: "500+ Files" },
   { value: "Fortune 500", label: "Strategic Influence", context: "Visa DPS" }
 ];
