@@ -21,6 +21,7 @@ const projects = [
     title: "Nest Athens Early Stage Product Validation",
     date: "November 2025",
     team: "Team of 4",
+    organization: "Class Project",
     description: "Designed customizable care package platform for UGA students, validating market fit through 50+ student surveys and business owner interviews.",
     responsibilities: [
       "Conducted 2 interview rounds and surveyed 50+ students on demand, pricing, preferences",
