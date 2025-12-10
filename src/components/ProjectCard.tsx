@@ -1,4 +1,4 @@
-import { Calendar, Users, Building2 } from "lucide-react";
+import { Calendar, Users, Building2, FileText } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -9,6 +9,7 @@ interface ProjectCardProps {
   responsibilities: string[];
   technicalDetails?: string[];
   achievements: string[];
+  images?: string[];
   index: number;
 }
 
@@ -21,6 +22,7 @@ const ProjectCard = ({
   responsibilities,
   technicalDetails,
   achievements,
+  images,
   index,
 }: ProjectCardProps) => {
   return (
@@ -104,6 +106,38 @@ const ProjectCard = ({
             ))}
           </div>
         </div>
+
+        {/* Project Images */}
+        {images && images.length > 0 && (
+          <div className="pt-5 mt-5 border-t border-border">
+            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
+              Project Deliverables
+            </h4>
+            <div className="grid gap-4">
+              {images.map((image, i) => (
+                image.endsWith('.pdf') ? (
+                  <a 
+                    key={i} 
+                    href={image} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors border border-border"
+                  >
+                    <FileText className="w-6 h-6 text-accent" />
+                    <span className="text-sm text-foreground font-medium">View Project Documentation (PDF)</span>
+                  </a>
+                ) : (
+                  <img
+                    key={i}
+                    src={image}
+                    alt={`${title} deliverable ${i + 1}`}
+                    className="w-full rounded-lg border border-border shadow-sm"
+                  />
+                )
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

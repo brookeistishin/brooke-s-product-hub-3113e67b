@@ -1,5 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import { useEffect, useRef, useState } from "react";
+import clothingAppWireframe from "@/assets/clothing-app-wireframe.png";
 
 const projects = [
   {
@@ -170,7 +171,8 @@ const projects = [
     achievements: [
       "Professional PM concept",
       "UX mastery demonstrated"
-    ]
+    ],
+    images: [clothingAppWireframe, "/clothing-app-project.pdf"]
   }
 ];
 
