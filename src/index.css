@@ -123,7 +123,20 @@
   }
 
   .timeline-dot {
-    @apply w-4 h-4 rounded-full bg-accent border-4 border-background shadow-md z-10 flex-shrink-0;
+    @apply w-4 h-4 rounded-full bg-accent border-4 border-background shadow-lg z-10 flex-shrink-0;
+    box-shadow: 0 0 0 3px hsl(var(--accent) / 0.2), 0 2px 8px hsl(var(--accent) / 0.3);
+  }
+
+  .timeline-date-label {
+    @apply absolute left-6 whitespace-nowrap;
+  }
+
+  .timeline-date-text {
+    @apply inline-block px-3 py-1.5 text-xs font-semibold tracking-wide uppercase rounded-full;
+    background: linear-gradient(135deg, hsl(var(--accent) / 0.15), hsl(var(--accent) / 0.05));
+    color: hsl(var(--accent));
+    border: 1px solid hsl(var(--accent) / 0.2);
+    backdrop-filter: blur(8px);
   }
 
 
