@@ -244,18 +244,15 @@ const ProjectTimeline = () => {
           {/* Timeline line */}
           <div className="timeline-line" />
 
-          {/* Scrolling dot with dynamic date */}
+          {/* Scrolling dot */}
           <div
-            className="absolute left-0 w-12 flex flex-col items-center transition-all duration-300 ease-out"
+            className="absolute left-0 flex items-center transition-all duration-300 ease-out"
             style={{
               top: `${scrollDotPosition}px`,
               zIndex: 20
             }}
           >
             <div className="timeline-dot" />
-            <div className="timeline-date">
-              {currentDate}
-            </div>
           </div>
 
           {/* Projects */}
