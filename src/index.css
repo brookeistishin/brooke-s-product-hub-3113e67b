@@ -126,13 +126,6 @@
     @apply w-4 h-4 rounded-full bg-accent border-4 border-background shadow-md z-10 flex-shrink-0;
   }
 
-  .timeline-date {
-    @apply text-[10px] font-medium text-muted-foreground text-center mt-2 leading-tight;
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
-    transform: rotate(180deg);
-    white-space: nowrap;
-  }
 
   .project-card {
     @apply bg-card rounded-xl border border-border p-6 transition-all duration-300;
