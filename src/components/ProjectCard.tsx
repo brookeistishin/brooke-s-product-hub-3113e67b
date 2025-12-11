@@ -1,7 +1,7 @@
 import { Calendar, Users, Building2, FileText, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
-type ImageType = string | { src: string; link: string };
+type ImageType = string | { src: string; link?: string; width?: string };
 
 interface ProjectCardProps {
   title: string;
@@ -146,6 +146,7 @@ const ProjectCard = ({
               {images.map((image, i) => {
                 const imageSrc = typeof image === 'string' ? image : image.src;
                 const imageLink = typeof image === 'object' ? image.link : undefined;
+                const imageWidth = typeof image === 'object' && image.width ? image.width : 'w-full';
 
                 if (imageSrc.endsWith('.pdf')) {
                   return (
@@ -172,7 +173,7 @@ const ProjectCard = ({
                       <img
                         src={imageSrc}
                         alt={`${title} deliverable ${i + 1}`}
-                        className="w-full rounded-lg border border-border shadow-sm"
+                        className={`${imageWidth} rounded-lg border border-border shadow-sm`}
                       />
                     </a>
                   );
@@ -186,7 +187,7 @@ const ProjectCard = ({
                       <img
                         src={imageSrc}
                         alt={`${title} deliverable ${i + 1}`}
-                        className="w-full rounded-lg border border-border shadow-sm"
+                        className={`${imageWidth} rounded-lg border border-border shadow-sm`}
                       />
                     </div>
                   );

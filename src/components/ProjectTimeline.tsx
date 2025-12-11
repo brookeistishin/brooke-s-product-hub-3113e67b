@@ -177,7 +177,10 @@ const projects = [
       "Created WBS, requirements documentation, process models"
     ],
     achievements: [],
-    images: [rentalappui, rentalWireframe2]
+    images: [
+      { src: rentalappui, width: 'w-1/2' },
+      rentalWireframe2
+    ]
   }
 ];
 
