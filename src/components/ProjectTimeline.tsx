@@ -91,13 +91,7 @@ const projects = [
       "Built analytical frameworks for financial aid-entrepreneurship relationships",
       "Defined research approach and problem definition"
     ],
-    technicalDetails: [
-      "Executed structured literature review with categorization system"
-    ],
-    achievements: [
-      "Informed Kauffman Foundation methodology",
-      "Multi-year research foundation"
-    ],
+    achievements: [],
     images: [
       {
         src: meritAidScreenshot,
