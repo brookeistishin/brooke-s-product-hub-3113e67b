@@ -4,7 +4,7 @@ import clothingAppWireframe from "@/assets/clothing-app-wireframe.png";
 
 const projects = [
   {
-    title: "AI Talent Readiness and Employer Insight Product Research",
+    title: "AI Skills Gap Analysis",
     date: "September 2025 - Present",
     organization: "Independent Research",
     description: "Investigating AI competency gaps between Terry College curriculum and employer expectations through structured literature review and stakeholder analysis.",
