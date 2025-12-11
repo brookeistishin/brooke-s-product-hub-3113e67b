@@ -94,18 +94,20 @@ const ProjectCard = ({
         )}
         
         {/* Achievements */}
-        <div className="pt-4 border-t border-border">
-          <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">
-            Key Achievements
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {achievements.map((achievement, i) => (
-              <span key={i} className="tag">
-                {achievement}
-              </span>
-            ))}
+        {achievements.length > 0 && (
+          <div className="pt-4 border-t border-border">
+            <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-3">
+              Key Achievements
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {achievements.map((achievement, i) => (
+                <span key={i} className="tag">
+                  {achievement}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Project Images */}
         {images && images.length > 0 && (
