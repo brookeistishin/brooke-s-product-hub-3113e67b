@@ -1,4 +1,5 @@
-import { Calendar, Users, Building2, FileText } from "lucide-react";
+import { Calendar, Users, Building2, FileText, X } from "lucide-react";
+import { useState, useEffect } from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -27,6 +28,28 @@ const ProjectCard = ({
   hasNda,
   index,
 }: ProjectCardProps) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Close modal on ESC key press
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape);
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
+
   return (
     <div className="relative pl-16 pb-12 last:pb-0" data-date={date}>
       
@@ -131,11 +154,9 @@ const ProjectCard = ({
                     <span className="text-sm text-foreground font-medium">View Project Documentation (PDF)</span>
                   </a>
                 ) : (
-                  <a
+                  <div
                     key={i}
-                    href={image}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    onClick={() => setSelectedImage(image)}
                     className="block cursor-pointer hover:opacity-90 transition-opacity"
                   >
                     <img
@@ -143,7 +164,7 @@ const ProjectCard = ({
                       alt={`${title} deliverable ${i + 1}`}
                       className="w-full rounded-lg border border-border shadow-sm"
                     />
-                  </a>
+                  </div>
                 )
               ))}
             </div>
@@ -157,6 +178,28 @@ const ProjectCard = ({
           </p>
         )}
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+          <img
+            src={selectedImage}
+            alt={title}
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };
