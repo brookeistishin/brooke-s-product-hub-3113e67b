@@ -1,6 +1,7 @@
 import ProjectCard from "./ProjectCard";
 import { useEffect, useRef, useState } from "react";
 import clothingAppWireframe from "@/assets/clothing-app-wireframe.png";
+import uga4threadsWireframe from "@/assets/uga4threads-wireframe.png";
 
 const projects = [
   {
@@ -157,7 +158,7 @@ const projects = [
     hasNda: true
   },
   {
-    title: "Sustainable Clothing Rental App UX and Wireframe",
+    title: "Sustainable Clothing Rental App",
     date: "February - March 2024",
     team: "Team of 4",
     organization: "Class Project",
@@ -172,7 +173,7 @@ const projects = [
       "Created WBS, requirements documentation, process models"
     ],
     achievements: [],
-    images: [clothingAppWireframe]
+    images: [clothingAppWireframe, uga4threadsWireframe]
   }
 ];
 

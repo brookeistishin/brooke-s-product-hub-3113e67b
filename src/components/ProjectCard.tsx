@@ -117,7 +117,7 @@ const ProjectCard = ({
             <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
               Project Deliverables
             </h4>
-            <div className="grid gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {images.map((image, i) => (
                 image.endsWith('.pdf') ? (
                   <a 
@@ -135,7 +135,7 @@ const ProjectCard = ({
                     key={i}
                     src={image}
                     alt={`${title} deliverable ${i + 1}`}
-                    className="w-1/2 rounded-lg border border-border shadow-sm"
+                    className="w-full rounded-lg border border-border shadow-sm"
                   />
                 )
               ))}
