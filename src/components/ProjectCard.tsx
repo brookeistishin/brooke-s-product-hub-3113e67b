@@ -140,7 +140,7 @@ const ProjectCard = ({
         {images && images.length > 0 && (
           <div className="pt-5 mt-5 border-t border-border">
             <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
-              Project Deliverables
+              Read more
             </h4>
             <div className="grid grid-cols-2 gap-4">
               {images.map((image, i) => {
