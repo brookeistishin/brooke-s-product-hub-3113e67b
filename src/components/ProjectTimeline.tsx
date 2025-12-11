@@ -5,7 +5,7 @@ import uga4threadsWireframe from "@/assets/uga4threads-wireframe.png";
 
 const projects = [
   {
-    title: "AI Skills Gap Analysis",
+    title: "AI Skills Gap Analysis in Early-Career Talent",
     date: "September 2025 - Present",
     organization: "Independent Research",
     description: "Investigating AI competency gaps between Terry College curriculum and employer expectations through structured literature review and stakeholder analysis.",
