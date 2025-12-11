@@ -168,10 +168,7 @@ const projects = [
       "Built wireframes, business model, data management model",
       "Created WBS, requirements documentation, process models"
     ],
-    achievements: [
-      "Professional PM concept",
-      "UX mastery demonstrated"
-    ],
+    achievements: [],
     images: [clothingAppWireframe]
   }
 ];

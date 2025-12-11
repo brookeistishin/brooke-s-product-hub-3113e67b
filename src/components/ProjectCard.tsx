@@ -131,7 +131,7 @@ const ProjectCard = ({
                     key={i}
                     src={image}
                     alt={`${title} deliverable ${i + 1}`}
-                    className="w-full rounded-lg border border-border shadow-sm"
+                    className="w-1/2 rounded-lg border border-border shadow-sm"
                   />
                 )
               ))}
