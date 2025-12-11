@@ -2,6 +2,8 @@ import ProjectCard from "./ProjectCard";
 import { useEffect, useRef, useState } from "react";
 import clothingAppWireframe from "@/assets/clothing-app-wireframe.png";
 import uga4threadsWireframe from "@/assets/uga4threads-wireframe.png";
+import rentalWireframe1 from "@/assets/Rental WireFrame (1).png";
+import rentalWireframe2 from "@/assets/Rental WireFrame (2).png";
 
 const projects = [
   {
@@ -173,7 +175,7 @@ const projects = [
       "Created WBS, requirements documentation, process models"
     ],
     achievements: [],
-    images: [clothingAppWireframe, uga4threadsWireframe]
+    images: [clothingAppWireframe, uga4threadsWireframe, rentalWireframe1, rentalWireframe2]
   }
 ];
 
