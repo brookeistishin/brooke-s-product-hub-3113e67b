@@ -4,6 +4,7 @@ import rentalWireframe1 from "@/assets/Rental WireFrame (1).png";
 import rentalWireframe2 from "@/assets/Rental WireFrame (2).png";
 import sqlDashboard from "@/assets/SQL dashboard.png";
 import sqlDatamodel from "@/assets/SQL datamodel.png";
+import meritAidScreenshot from "@/assets/Screenshot 2025-12-11 073601.png";
 
 const projects = [
   {
@@ -96,6 +97,12 @@ const projects = [
     achievements: [
       "Informed Kauffman Foundation methodology",
       "Multi-year research foundation"
+    ],
+    images: [
+      {
+        src: meritAidScreenshot,
+        link: "https://news.gsu.edu/2022/09/22/georgias-flagship-research-universities-share-grant-to-study-link-between-hope-scholarship-entrepreneurship/"
+      }
     ]
   },
   {

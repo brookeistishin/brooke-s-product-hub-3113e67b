@@ -1,6 +1,8 @@
 import { Calendar, Users, Building2, FileText, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
+type ImageType = string | { src: string; link: string };
+
 interface ProjectCardProps {
   title: string;
   date: string;
@@ -10,7 +12,7 @@ interface ProjectCardProps {
   responsibilities: string[];
   technicalDetails?: string[];
   achievements: string[];
-  images?: string[];
+  images?: ImageType[];
   hasNda?: boolean;
   index: number;
 }
@@ -141,32 +143,55 @@ const ProjectCard = ({
               Project Deliverables
             </h4>
             <div className="grid grid-cols-2 gap-4">
-              {images.map((image, i) => (
-                image.endsWith('.pdf') ? (
-                  <a 
-                    key={i} 
-                    href={image} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors border border-border"
-                  >
-                    <FileText className="w-6 h-6 text-accent" />
-                    <span className="text-sm text-foreground font-medium">View Project Documentation (PDF)</span>
-                  </a>
-                ) : (
-                  <div
-                    key={i}
-                    onClick={() => setSelectedImage(image)}
-                    className="block cursor-pointer hover:opacity-90 transition-opacity"
-                  >
-                    <img
-                      src={image}
-                      alt={`${title} deliverable ${i + 1}`}
-                      className="w-full rounded-lg border border-border shadow-sm"
-                    />
-                  </div>
-                )
-              ))}
+              {images.map((image, i) => {
+                const imageSrc = typeof image === 'string' ? image : image.src;
+                const imageLink = typeof image === 'object' ? image.link : undefined;
+
+                if (imageSrc.endsWith('.pdf')) {
+                  return (
+                    <a
+                      key={i}
+                      href={imageSrc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors border border-border"
+                    >
+                      <FileText className="w-6 h-6 text-accent" />
+                      <span className="text-sm text-foreground font-medium">View Project Documentation (PDF)</span>
+                    </a>
+                  );
+                } else if (imageLink) {
+                  return (
+                    <a
+                      key={i}
+                      href={imageLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block cursor-pointer hover:opacity-90 transition-opacity"
+                    >
+                      <img
+                        src={imageSrc}
+                        alt={`${title} deliverable ${i + 1}`}
+                        className="w-full rounded-lg border border-border shadow-sm"
+                      />
+                    </a>
+                  );
+                } else {
+                  return (
+                    <div
+                      key={i}
+                      onClick={() => setSelectedImage(imageSrc)}
+                      className="block cursor-pointer hover:opacity-90 transition-opacity"
+                    >
+                      <img
+                        src={imageSrc}
+                        alt={`${title} deliverable ${i + 1}`}
+                        className="w-full rounded-lg border border-border shadow-sm"
+                      />
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
         )}
