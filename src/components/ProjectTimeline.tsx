@@ -162,11 +162,11 @@ const projects = [
     hasNda: true
   },
   {
-    title: "Sustainable Clothing Rental App",
+    title: "Sustainable Clothing Rental",
     date: "February - March 2024",
     team: "Team of 4",
     organization: "Class Project",
-    description: "Designed sustainable clothing rental app for Athens students with complete UX design and business model.",
+    description: "Identified market gap for local rental platforms. Designed sustainable clothing rental app for Athens students with complete UX design and business model.",
     responsibilities: [
       "Designed end-to-end user journey (browse → reserve → pickup → return → review)",
       "Developed pricing logic ($10–$40) based on competitor analysis and affordability",
