@@ -178,8 +178,8 @@ const projects = [
     ],
     achievements: [],
     images: [
-      { src: rentalappui, width: 'w-1/2' },
-      rentalWireframe2
+      { src: rentalappui, width: 'w-[48%]' },
+      { src: rentalWireframe2, width: 'w-[48%]' }
     ]
   }
 ];
