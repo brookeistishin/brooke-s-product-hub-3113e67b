@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 import { useEffect, useRef, useState } from "react";
-import rentalWireframe1 from "@/assets/Rental WireFrame (1).png";
+import rentalappui from "@/assets/Rentalappui.png";
 import rentalWireframe2 from "@/assets/Rental WireFrame (2).png";
 import sqlDashboard from "@/assets/SQL dashboard.png";
 import sqlDatamodel from "@/assets/SQL datamodel.png";
@@ -177,7 +177,7 @@ const projects = [
       "Created WBS, requirements documentation, process models"
     ],
     achievements: [],
-    images: [rentalWireframe1, rentalWireframe2]
+    images: [rentalappui, rentalWireframe2]
   }
 ];
 
