@@ -81,7 +81,7 @@ const projects = [
     title: "Merit Aid and Entrepreneurship Correlation Study",
     date: "January - May 2025",
     organization: "Independent Research",
-    description: "Shaped methodology for Kauffman Foundation-funded study examining correlation between merit aid and entrepreneurial outcomes.",
+    description: "Shaped methodology for Kauffman Foundation Knowledge Challenge-funded study examining correlation between merit aid and entrepreneurial outcomes. Advised under UGA Executive MBA Professor, Dr. Susan Cohen.",
     responsibilities: [
       "Analyzed 30+ publications on merit aid, entrepreneurship, and student outcomes",
       "Built analytical frameworks for financial aid-entrepreneurship relationships",
