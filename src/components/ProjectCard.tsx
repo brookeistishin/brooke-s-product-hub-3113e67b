@@ -10,6 +10,7 @@ interface ProjectCardProps {
   technicalDetails?: string[];
   achievements: string[];
   images?: string[];
+  hasNda?: boolean;
   index: number;
 }
 
@@ -23,6 +24,7 @@ const ProjectCard = ({
   technicalDetails,
   achievements,
   images,
+  hasNda,
   index,
 }: ProjectCardProps) => {
   return (
@@ -139,6 +141,13 @@ const ProjectCard = ({
               ))}
             </div>
           </div>
+        )}
+
+        {/* NDA Notice */}
+        {hasNda && (
+          <p className="text-xs text-muted-foreground italic mt-4 pt-4 border-t border-border">
+            * Project images cannot be displayed due to NDA restrictions
+          </p>
         )}
       </div>
     </div>

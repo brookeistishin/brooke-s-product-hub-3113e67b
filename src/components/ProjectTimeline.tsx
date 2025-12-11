@@ -74,7 +74,8 @@ const projects = [
       "API-driven migration method",
       "$2,500+ cost reduction",
       "Streamlined migration process"
-    ]
+    ],
+    hasNda: true
   },
   {
     title: "Merit Aid and Entrepreneurship Correlation Study",
@@ -111,7 +112,8 @@ const projects = [
     achievements: [
       "Influenced Visa DPS assessment",
       "Fortune 500 strategic impact"
-    ]
+    ],
+    hasNda: true
   },
   {
     title: "Retail Analytics Dashboard MVP Development",
@@ -151,7 +153,8 @@ const projects = [
     achievements: [
       "2× customer engagement",
       "Enhanced brand visibility"
-    ]
+    ],
+    hasNda: true
   },
   {
     title: "Sustainable Clothing Rental App UX and Wireframe",
