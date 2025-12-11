@@ -131,12 +131,19 @@ const ProjectCard = ({
                     <span className="text-sm text-foreground font-medium">View Project Documentation (PDF)</span>
                   </a>
                 ) : (
-                  <img
+                  <a
                     key={i}
-                    src={image}
-                    alt={`${title} deliverable ${i + 1}`}
-                    className="w-full rounded-lg border border-border shadow-sm"
-                  />
+                    href={image}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block cursor-pointer hover:opacity-90 transition-opacity"
+                  >
+                    <img
+                      src={image}
+                      alt={`${title} deliverable ${i + 1}`}
+                      className="w-full rounded-lg border border-border shadow-sm"
+                    />
+                  </a>
                 )
               ))}
             </div>
