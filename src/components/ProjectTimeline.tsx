@@ -9,6 +9,7 @@ import nestAthensKeyInsights from "@/assets/key_insights_dashboard (1).png";
 import nestAthensScreenshot2 from "@/assets/Screenshot 2025-12-15 133710.png";
 import nestAthensScreenshot3 from "@/assets/Screenshot 2025-12-15 133735.png";
 import nestAthensScreenshot5 from "@/assets/Screenshot 2025-12-15 134726.png";
+import frontierOnepager from "@/assets/Frontier_onepager.png";
 
 const projects = [
   {
@@ -63,7 +64,8 @@ const projects = [
     achievements: [
       "Linked UX failures to operations",
       "Industry-grade competitive analysis"
-    ]
+    ],
+    images: [frontierOnepager]
   },
   {
     title: "Cerity Partners Workflow Automation Optimization",
