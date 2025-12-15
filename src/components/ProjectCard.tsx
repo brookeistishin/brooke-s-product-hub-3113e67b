@@ -13,6 +13,7 @@ interface ProjectCardProps {
   technicalDetails?: string[];
   achievements: string[];
   images?: ImageType[];
+  imagesHeading?: string;
   hasNda?: boolean;
   index: number;
 }
@@ -27,6 +28,7 @@ const ProjectCard = ({
   technicalDetails,
   achievements,
   images,
+  imagesHeading = "Project Deliverables",
   hasNda,
   index,
 }: ProjectCardProps) => {
@@ -140,7 +142,7 @@ const ProjectCard = ({
         {images && images.length > 0 && (
           <div className="pt-5 mt-5 border-t border-border">
             <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
-              Read more
+              {imagesHeading}
             </h4>
             <div className="grid grid-cols-2 gap-4">
               {images.map((image, i) => {

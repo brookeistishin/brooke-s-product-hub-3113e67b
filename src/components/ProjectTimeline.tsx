@@ -6,6 +6,10 @@ import sqlDashboard from "@/assets/SQL dashboard.png";
 import sqlDatamodel from "@/assets/SQL datamodel.png";
 import meritAidScreenshot from "@/assets/Screenshot 2025-12-11 073601.png";
 import nestAthensKeyInsights from "@/assets/key_insights_dashboard (1).png";
+import nestAthensScreenshot2 from "@/assets/Screenshot 2025-12-15 133710.png";
+import nestAthensScreenshot3 from "@/assets/Screenshot 2025-12-15 133735.png";
+import nestAthensScreenshot5 from "@/assets/Screenshot 2025-12-15 134726.png";
+import frontierOnepager from "@/assets/Frontier_onepager.png";
 
 const projects = [
   {
@@ -36,13 +40,13 @@ const projects = [
     ],
     technicalDetails: [
       "Built UX flows and wireframes for customization interface",
-      "Analyzed survey data for pricing optimization ($30–$50 range)"
+      "Analyzed survey data for pricing optimization ($35-$50 range)"
     ],
     achievements: [
       "Market-backed product strategy",
       "Validated demand quantitatively"
     ],
-    images: [nestAthensKeyInsights]
+    images: [nestAthensScreenshot2, nestAthensScreenshot3, nestAthensScreenshot5, nestAthensKeyInsights]
   },
   {
     title: "Frontier Airlines CX Redesign Strategy",
@@ -51,18 +55,17 @@ const projects = [
     organization: "Class Project",
     description: "Developed 3-part product solution (predictive delay AI, UX overhaul, loyalty redesign) addressing Frontier's 3-year complaint leadership among U.S. airlines.",
     responsibilities: [
-      "Mapped 2021–2025 customer pain-point timeline and end-to-end travel journey",
-      "Benchmarked delay metrics and UX reliability against Spirit, Allegiant, Southwest",
-      "Built data visualizations using DOT/BTS datasets"
-    ],
-    technicalDetails: [
-      "Created C-suite presentation deck and executive one-pager",
-      "Analyzed complaints per 100k passengers and delay patterns"
+      "Mapped a 2021–2025 customer pain-point timeline and end-to-end travel journey using DOT and BTS datasets",
+      "Benchmarked delay frequency, complaint rates (per 100K passengers), and UX reliability against Spirit, Allegiant, and Southwest",
+      "Analyzed delay patterns and operational reliability to identify systemic breakdowns impacting customer experience",
+      "Built data visualizations to surface trends in delays and complaints for executive decision-making",
+      "Synthesized findings into a C-suite presentation deck and executive one-pager with actionable insights"
     ],
     achievements: [
       "Linked UX failures to operations",
       "Industry-grade competitive analysis"
-    ]
+    ],
+    images: [frontierOnepager]
   },
   {
     title: "Cerity Partners Workflow Automation Optimization",
@@ -99,7 +102,8 @@ const projects = [
         src: meritAidScreenshot,
         link: "https://news.gsu.edu/2022/09/22/georgias-flagship-research-universities-share-grant-to-study-link-between-hope-scholarship-entrepreneurship/"
       }
-    ]
+    ],
+    imagesHeading: "Read more"
   },
   {
     title: "Visa DPS Product Strategy",
@@ -179,7 +183,7 @@ const projects = [
       "Created WBS, requirements documentation, process models"
     ],
     achievements: [],
-    images: [rentalWireframe1, rentalWireframe2]
+    images: [rentalWireframe2]
   }
 ];
 
