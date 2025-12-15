@@ -54,13 +54,11 @@ const projects = [
     organization: "Class Project",
     description: "Developed 3-part product solution (predictive delay AI, UX overhaul, loyalty redesign) addressing Frontier's 3-year complaint leadership among U.S. airlines.",
     responsibilities: [
-      "Mapped 2021–2025 customer pain-point timeline and end-to-end travel journey",
-      "Benchmarked delay metrics and UX reliability against Spirit, Allegiant, Southwest",
-      "Built data visualizations using DOT/BTS datasets"
-    ],
-    technicalDetails: [
-      "Created C-suite presentation deck and executive one-pager",
-      "Analyzed complaints per 100k passengers and delay patterns"
+      "Mapped a 2021–2025 customer pain-point timeline and end-to-end travel journey using DOT and BTS datasets",
+      "Benchmarked delay frequency, complaint rates (per 100K passengers), and UX reliability against Spirit, Allegiant, and Southwest",
+      "Analyzed delay patterns and operational reliability to identify systemic breakdowns impacting customer experience",
+      "Built data visualizations to surface trends in delays and complaints for executive decision-making",
+      "Synthesized findings into a C-suite presentation deck and executive one-pager with actionable insights"
     ],
     achievements: [
       "Linked UX failures to operations",
