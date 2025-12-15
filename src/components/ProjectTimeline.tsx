@@ -2,6 +2,7 @@ import ProjectCard from "./ProjectCard";
 import { useEffect, useRef, useState } from "react";
 import rentalWireframe1 from "@/assets/Rental WireFrame (1).png";
 import rentalWireframe2 from "@/assets/Rental WireFrame (2).png";
+import keyInsightsDashboard from "@/assets/key_insights_dashboard (1).png";
 
 const projects = [
   {
@@ -37,7 +38,8 @@ const projects = [
     achievements: [
       "Market-backed product strategy",
       "Validated demand quantitatively"
-    ]
+    ],
+    images: [keyInsightsDashboard]
   },
   {
     title: "Frontier Airlines CX Redesign Strategy",
