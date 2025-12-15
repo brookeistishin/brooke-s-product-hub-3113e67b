@@ -39,7 +39,7 @@ const projects = [
     ],
     technicalDetails: [
       "Built UX flows and wireframes for customization interface",
-      "Analyzed survey data for pricing optimization ($30–$50 range)"
+      "Analyzed survey data for pricing optimization (35-$50  range)"
     ],
     achievements: [
       "Market-backed product strategy",
