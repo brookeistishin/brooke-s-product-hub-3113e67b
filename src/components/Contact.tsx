@@ -20,7 +20,7 @@ const Contact = () => {
             brookeistishin@gmail.com
           </a>
           <a
-            href="https://linkedin.com/in/brookeistishin"
+            href="https://www.linkedin.com/in/brooke-istishin/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground rounded-full transition-all duration-300 border border-primary-foreground/20 font-medium w-full sm:w-auto justify-center"
