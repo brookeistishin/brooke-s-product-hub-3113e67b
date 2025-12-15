@@ -1,73 +1,61 @@
-# Welcome to your Lovable project
+# Brooke Istishin - Product Management Portfolio
 
-## Project info
+A personal portfolio website showcasing product management experience, skills, and measurable impact.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About
 
-## How can I edit this code?
+This portfolio highlights Brooke Istishin's product management work spanning strategy, research, technical implementation, and measurable outcomes. It features projects from independent research, consulting engagements, and class projects at the University of Georgia's Terry College of Business.
 
-There are several ways of editing your application.
+## Features
 
-**Use Lovable**
+- **Measurable Impact** - Key metrics demonstrating quantifiable results
+- **Core Competencies** - Product strategy, cross-functional leadership, data-driven decision making, and customer-centric development
+- **Project Timeline** - Detailed case studies with responsibilities, technical details, and achievements
+- **Responsive Design** - Optimized for desktop and mobile viewing
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React** - UI framework
+- **TypeScript** - Type-safe JavaScript
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first styling
+- **shadcn/ui** - UI component library
 
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+## Getting Started
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repository
+git clone https://github.com/brookeistishin/brooke-s-product-hub-3113e67b.git
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Navigate to project directory
+cd brooke-s-product-hub-3113e67b
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Install dependencies
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Project Structure
 
-**Use GitHub Codespaces**
+```
+src/
+├── components/
+│   ├── Hero.tsx           # Header section with intro and contact links
+│   ├── Competencies.tsx   # Measurable impact and core skills
+│   ├── ProjectTimeline.tsx # Project experience timeline
+│   ├── ProjectCard.tsx    # Individual project display
+│   └── Contact.tsx        # Contact section
+├── pages/
+│   └── Index.tsx          # Main page layout
+└── assets/                # Project images and deliverables
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Contact
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- **Email**: brookeistishin@gmail.com
+- **LinkedIn**: [linkedin.com/in/brooke-istishin](https://www.linkedin.com/in/brooke-istishin/)
+- **Location**: Athens, Georgia - University of Georgia

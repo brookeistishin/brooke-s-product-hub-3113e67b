@@ -14,16 +14,16 @@ const Contact = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a
             href="mailto:brookeistishin@gmail.com"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground text-primary rounded-full hover:bg-primary-foreground/90 transition-all duration-300 font-medium w-full sm:w-auto justify-center"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground rounded-full transition-all duration-300 border border-primary-foreground/20 font-medium w-full sm:w-auto justify-center"
           >
             <Mail className="w-4 h-4" />
-            brookeistishin@gmail.com
+            Email
           </a>
           <a
             href="https://www.linkedin.com/in/brooke-istishin/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 hover:bg-primary-foreground/20 text-primary-foreground rounded-full transition-all duration-300 border border-primary-foreground/20 font-medium w-full sm:w-auto justify-center"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground text-primary rounded-full hover:bg-primary-foreground/90 transition-all duration-300 font-medium w-full sm:w-auto justify-center"
           >
             <Linkedin className="w-4 h-4" />
             LinkedIn Profile

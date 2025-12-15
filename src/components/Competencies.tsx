@@ -49,9 +49,34 @@ const metrics = [
 
 const Competencies = () => {
   return (
-    <section className="py-20 px-6 bg-muted/30">
+    <section className="py-20 px-6 bg-background">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-16">
+        {/* Impact Metrics */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
+            Measurable Impact
+          </h2>
+          <div className="w-16 h-0.5 bg-accent mx-auto" />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-16">
+          {metrics.map((metric, index) => (
+            <div key={index} className="metric-card">
+              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
+                {metric.value}
+              </div>
+              <div className="text-sm font-medium text-foreground mb-1">
+                {metric.label}
+              </div>
+              <div className="text-xs text-muted-foreground">
+                {metric.context}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Core Competencies */}
+        <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             Core Competencies
           </h2>
@@ -59,9 +84,9 @@ const Competencies = () => {
             Skills developed through hands-on product management experience across diverse industries and contexts.
           </p>
         </div>
-        
+
         {/* Competency Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {competencies.map((comp, index) => (
             <div key={index} className="project-card">
               <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4">
@@ -76,30 +101,6 @@ const Competencies = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-          ))}
-        </div>
-        
-        {/* Impact Metrics */}
-        <div className="text-center mb-8">
-          <h3 className="text-xl font-display font-semibold text-foreground mb-2">
-            Measurable Impact
-          </h3>
-          <div className="w-16 h-0.5 bg-accent mx-auto" />
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {metrics.map((metric, index) => (
-            <div key={index} className="metric-card">
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
-                {metric.value}
-              </div>
-              <div className="text-sm font-medium text-foreground mb-1">
-                {metric.label}
-              </div>
-              <div className="text-xs text-muted-foreground">
-                {metric.context}
-              </div>
             </div>
           ))}
         </div>
