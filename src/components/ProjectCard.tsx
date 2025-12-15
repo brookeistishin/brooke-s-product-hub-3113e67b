@@ -1,4 +1,7 @@
-import { Calendar, Users, Building2, FileText } from "lucide-react";
+import { Calendar, Users, Building2, FileText, X } from "lucide-react";
+import { useState, useEffect } from "react";
+
+type ImageType = string | { src: string; link?: string; width?: string };
 
 interface ProjectCardProps {
   title: string;
@@ -9,7 +12,7 @@ interface ProjectCardProps {
   responsibilities: string[];
   technicalDetails?: string[];
   achievements: string[];
-  images?: string[];
+  images?: ImageType[];
   hasNda?: boolean;
   index: number;
 }
@@ -27,6 +30,28 @@ const ProjectCard = ({
   hasNda,
   index,
 }: ProjectCardProps) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  // Close modal on ESC key press
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSelectedImage(null);
+      }
+    };
+
+    if (selectedImage) {
+      document.addEventListener('keydown', handleEscape);
+      // Prevent body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedImage]);
+
   return (
     <div className="relative pl-16 pb-12 last:pb-0" data-date={date}>
       
@@ -115,30 +140,59 @@ const ProjectCard = ({
         {images && images.length > 0 && (
           <div className="pt-5 mt-5 border-t border-border">
             <h4 className="text-sm font-semibold text-foreground uppercase tracking-wide mb-4">
-              Project Deliverables
+              Read more
             </h4>
             <div className="grid grid-cols-2 gap-4">
-              {images.map((image, i) => (
-                image.endsWith('.pdf') ? (
-                  <a 
-                    key={i} 
-                    href={image} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors border border-border"
-                  >
-                    <FileText className="w-6 h-6 text-accent" />
-                    <span className="text-sm text-foreground font-medium">View Project Documentation (PDF)</span>
-                  </a>
-                ) : (
-                  <img
-                    key={i}
-                    src={image}
-                    alt={`${title} deliverable ${i + 1}`}
-                    className="w-full rounded-lg border border-border shadow-sm"
-                  />
-                )
-              ))}
+              {images.map((image, i) => {
+                const imageSrc = typeof image === 'string' ? image : image.src;
+                const imageLink = typeof image === 'object' ? image.link : undefined;
+                const imageWidth = typeof image === 'object' && image.width ? image.width : 'w-full';
+
+                if (imageSrc.endsWith('.pdf')) {
+                  return (
+                    <a
+                      key={i}
+                      href={imageSrc}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors border border-border"
+                    >
+                      <FileText className="w-6 h-6 text-accent" />
+                      <span className="text-sm text-foreground font-medium">View Project Documentation (PDF)</span>
+                    </a>
+                  );
+                } else if (imageLink) {
+                  return (
+                    <a
+                      key={i}
+                      href={imageLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block cursor-pointer hover:opacity-90 transition-opacity"
+                    >
+                      <img
+                        src={imageSrc}
+                        alt={`${title} deliverable ${i + 1}`}
+                        className={`${imageWidth} rounded-lg border border-border shadow-sm`}
+                      />
+                    </a>
+                  );
+                } else {
+                  return (
+                    <div
+                      key={i}
+                      onClick={() => setSelectedImage(imageSrc)}
+                      className="block cursor-pointer hover:opacity-90 transition-opacity"
+                    >
+                      <img
+                        src={imageSrc}
+                        alt={`${title} deliverable ${i + 1}`}
+                        className={`${imageWidth} rounded-lg border border-border shadow-sm`}
+                      />
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
         )}
@@ -150,6 +204,28 @@ const ProjectCard = ({
           </p>
         )}
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
+            aria-label="Close"
+          >
+            <X className="w-6 h-6 text-white" />
+          </button>
+          <img
+            src={selectedImage}
+            alt={title}
+            className="max-w-full max-h-full object-contain"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 };

@@ -2,6 +2,10 @@ import ProjectCard from "./ProjectCard";
 import { useEffect, useRef, useState } from "react";
 import rentalWireframe1 from "@/assets/Rental WireFrame (1).png";
 import rentalWireframe2 from "@/assets/Rental WireFrame (2).png";
+import sqlDashboard from "@/assets/SQL dashboard.png";
+import sqlDatamodel from "@/assets/SQL datamodel.png";
+import meritAidScreenshot from "@/assets/Screenshot 2025-12-11 073601.png";
+import nestAthensKeyInsights from "@/assets/key_insights_dashboard (1).png";
 
 const projects = [
   {
@@ -37,7 +41,8 @@ const projects = [
     achievements: [
       "Market-backed product strategy",
       "Validated demand quantitatively"
-    ]
+    ],
+    images: [nestAthensKeyInsights]
   },
   {
     title: "Frontier Airlines CX Redesign Strategy",
@@ -88,12 +93,12 @@ const projects = [
       "Built analytical frameworks for financial aid-entrepreneurship relationships",
       "Defined research approach and problem definition"
     ],
-    technicalDetails: [
-      "Executed structured literature review with categorization system"
-    ],
-    achievements: [
-      "Informed Kauffman Foundation methodology",
-      "Multi-year research foundation"
+    achievements: [],
+    images: [
+      {
+        src: meritAidScreenshot,
+        link: "https://news.gsu.edu/2022/09/22/georgias-flagship-research-universities-share-grant-to-study-link-between-hope-scholarship-entrepreneurship/"
+      }
     ]
   },
   {
@@ -135,7 +140,8 @@ const projects = [
     achievements: [
       "Data-driven store priorities",
       "SQL + BI skills demonstrated"
-    ]
+    ],
+    images: [sqlDashboard, sqlDatamodel]
   },
   {
     title: "Blackwell Mortgage Customer Engagement Research",
@@ -158,11 +164,11 @@ const projects = [
     hasNda: true
   },
   {
-    title: "Sustainable Clothing Rental App",
+    title: "Sustainable Clothing Rental",
     date: "February - March 2024",
     team: "Team of 4",
     organization: "Class Project",
-    description: "Designed sustainable clothing rental app for Athens students with complete UX design and business model.",
+    description: "Identified market gap for local rental platforms. Designed sustainable clothing rental app for Athens students with complete UX design and business model.",
     responsibilities: [
       "Designed end-to-end user journey (browse → reserve → pickup → return → review)",
       "Developed pricing logic ($10–$40) based on competitor analysis and affordability",
