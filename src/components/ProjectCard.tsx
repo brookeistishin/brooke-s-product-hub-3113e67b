@@ -1,4 +1,5 @@
 import { Calendar, Users, Building2, FileText } from "lucide-react";
+import { useState } from "react";
 
 interface ProjectCardProps {
   title: string;
@@ -27,6 +28,7 @@ const ProjectCard = ({
   hasNda,
   index,
 }: ProjectCardProps) => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
   return (
     <div className="relative pl-16 pb-12 last:pb-0" data-date={date}>
       
@@ -120,10 +122,10 @@ const ProjectCard = ({
             <div className="grid grid-cols-2 gap-4">
               {images.map((image, i) => (
                 image.endsWith('.pdf') ? (
-                  <a 
-                    key={i} 
-                    href={image} 
-                    target="_blank" 
+                  <a
+                    key={i}
+                    href={image}
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors border border-border"
                   >
@@ -135,7 +137,8 @@ const ProjectCard = ({
                     key={i}
                     src={image}
                     alt={`${title} deliverable ${i + 1}`}
-                    className="w-full rounded-lg border border-border shadow-sm"
+                    className="w-full rounded-lg border border-border shadow-sm cursor-pointer hover:opacity-80 transition-opacity"
+                    onClick={() => setSelectedImage(image)}
                   />
                 )
               ))}
@@ -150,6 +153,22 @@ const ProjectCard = ({
           </p>
         )}
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm cursor-pointer"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div className="relative max-w-7xl max-h-[90vh] p-4">
+            <img
+              src={selectedImage}
+              alt={`${title} enlarged view`}
+              className="max-w-full max-h-[90vh] object-contain rounded-lg"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
