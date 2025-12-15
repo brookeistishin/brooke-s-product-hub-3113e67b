@@ -6,10 +6,9 @@ import sqlDashboard from "@/assets/SQL dashboard.png";
 import sqlDatamodel from "@/assets/SQL datamodel.png";
 import meritAidScreenshot from "@/assets/Screenshot 2025-12-11 073601.png";
 import nestAthensKeyInsights from "@/assets/key_insights_dashboard (1).png";
-import nestAthensScreenshot1 from "@/assets/Screenshot 2025-12-15 132919.png";
 import nestAthensScreenshot2 from "@/assets/Screenshot 2025-12-15 133710.png";
 import nestAthensScreenshot3 from "@/assets/Screenshot 2025-12-15 133735.png";
-import nestAthensScreenshot4 from "@/assets/Screenshot 2025-12-15 133810.png";
+import nestAthensScreenshot5 from "@/assets/Screenshot 2025-12-15 134726.png";
 
 const projects = [
   {
@@ -46,7 +45,7 @@ const projects = [
       "Market-backed product strategy",
       "Validated demand quantitatively"
     ],
-    images: [nestAthensKeyInsights, nestAthensScreenshot1, nestAthensScreenshot2, nestAthensScreenshot3, nestAthensScreenshot4]
+    images: [nestAthensScreenshot2, nestAthensScreenshot3, nestAthensScreenshot5, nestAthensKeyInsights]
   },
   {
     title: "Frontier Airlines CX Redesign Strategy",
