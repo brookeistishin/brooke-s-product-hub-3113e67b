@@ -7,8 +7,8 @@ const Index = () => {
   return (
     <main className="min-h-screen">
       <Hero />
-      <ProjectTimeline />
       <Competencies />
+      <ProjectTimeline />
       <Contact />
       
       {/* Footer */}

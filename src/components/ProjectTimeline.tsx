@@ -96,7 +96,10 @@ const projects = [
       "Built analytical frameworks for financial aid-entrepreneurship relationships",
       "Defined research approach and problem definition"
     ],
-    achievements: [],
+    achievements: [
+      "Contributed to Kauffman-funded research methodology",
+      "Framework adopted for ongoing study"
+    ],
     images: [
       {
         src: meritAidScreenshot,
