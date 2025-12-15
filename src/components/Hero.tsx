@@ -38,7 +38,7 @@ const Hero = () => {
             <span className="font-medium">Email</span>
           </a>
           <a
-            href="https://linkedin.com/in/brookeistishin"
+            href="https://www.linkedin.com/in/brooke-istishinlipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmwSEQVjUSjGNUe9VQhDmbw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground text-primary rounded-full hover:bg-primary-foreground/90 transition-all duration-300 font-medium"
