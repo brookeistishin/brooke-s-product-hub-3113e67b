@@ -5,6 +5,7 @@ import rentalWireframe2 from "@/assets/Rental WireFrame (2).png";
 import sqlDashboard from "@/assets/SQL dashboard.png";
 import sqlDatamodel from "@/assets/SQL datamodel.png";
 import meritAidScreenshot from "@/assets/Screenshot 2025-12-11 073601.png";
+import nestAthensKeyInsights from "@/assets/key_insights_dashboard (1).png";
 
 const projects = [
   {
@@ -40,7 +41,8 @@ const projects = [
     achievements: [
       "Market-backed product strategy",
       "Validated demand quantitatively"
-    ]
+    ],
+    images: [nestAthensKeyInsights]
   },
   {
     title: "Frontier Airlines CX Redesign Strategy",
