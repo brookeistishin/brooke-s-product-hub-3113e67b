@@ -102,7 +102,8 @@ const projects = [
         src: meritAidScreenshot,
         link: "https://news.gsu.edu/2022/09/22/georgias-flagship-research-universities-share-grant-to-study-link-between-hope-scholarship-entrepreneurship/"
       }
-    ]
+    ],
+    imagesHeading: "Read more"
   },
   {
     title: "Visa DPS Product Strategy",
